@@ -1,0 +1,1 @@
+# magento-google-knowledge-graph
