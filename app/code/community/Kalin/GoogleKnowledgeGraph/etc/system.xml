@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Kalin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to kalinvadim@gmail.com so we can send you a copy immediately.
+ *
+ * @category  Kalin
+ * @package   Kalin_GoogleKnowledgeGraph
+ * @link      https://github.com/VadymKalin/magento-google-knowledge-graph
+ * @author    Vadym Kalin <kalinvadim@gmail.com>
+ * @copyright Copyright (c) 2015-2016 Vadym Kalin (http://full-stack-dev.com)
+ * @license   http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <sections>
+        <googleknowledgegraph translate="label">
+            <label>Google Knowledge Graph</label>
+            <tab>catalog</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>55</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_webiste>1</show_in_webiste>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <logos translate="label">
+                    <label>Logos</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <logourl translate="label">
+                            <label>Logo</label>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">theme</upload_dir>
+                            <base_url type="media" scope_info="1">theme</base_url>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>You can specify which image Google should use as your organization's logo in search results and the Knowledge Graph.</comment>
+                        </logourl>
+                    </fields>
+                </logos>
+                <corporatecontacts translate="label">
+                    <label>Corporate contacts</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_webiste>1</show_in_webiste>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <telephone translate="label">
+                            <label>Telephone</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits</validate>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Required. An internationalized version of the phone number, starting with the "+" symbol and country code (+1 in the US and Canada).</comment>
+                        </telephone>
+                        <contacttype translate="label">
+                            <label>Contact type</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Required to be one of the values listed at right. These values are not case sensitive. (Additional contact types may be supported later.)</comment>
+                        </contacttype>
+                        <areaserved translate="label">
+                            <label>Area served</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Optional. The geographical region served by the number, specified as a Schema.org/AdministrativeArea. Countries may be specified concisely using just their standard ISO-3166 two-letter code, as in the examples at right. If omitted, the number is assumed to be global.</comment>
+                        </areaserved>
+                        <contactoption translate="label">
+                            <label>Contact option</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Optional details about the phone number. Currently only the two values shown at right are supported.</comment>
+                        </contactoption>
+                        <availablelanguage translate="label">
+                            <label>Available language</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Optional details about the language spoken. Languages may be specified by their common English name. If omitted, the language defaults to English.</comment>
+                        </availablelanguage>
+                    </fields>
+                </corporatecontacts>
+                <socialprofilelinks translate="label">
+                    <label>Social profile links</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <facebook translate="label">
+                            <label>Facebook</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </facebook>
+                        <twitter>
+                            <label>Twitter</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </twitter>
+                        <googleplus>
+                            <label>Google +</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_webiste>1</show_in_webiste>
+                            <show_in_store>1</show_in_store>
+                        </googleplus>
+                        <instagram>
+                            <label>Instagram</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </instagram>
+                        <youtube>
+                            <label>Youtube</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_webite>1</show_in_webite>
+                            <show_in_store>1</show_in_store>
+                        </youtube>
+                        <linkedin>
+                            <label>Linkedin</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_webite>1</show_in_webite>
+                            <show_in_store>1</show_in_store>
+                        </linkedin>
+                        <pinterrest>
+                            <label>Pinterrest</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_webite>1</show_in_webite>
+                            <show_in_store>1</show_in_store>
+                        </pinterrest>
+                        <soundcloud>
+                            <label>Soundcloud</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_webite>1</show_in_webite>
+                            <show_in_store>1</show_in_store>
+                        </soundcloud>
+                        <myspace>
+                            <label>Myspace</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_webite>1</show_in_webite>
+                            <show_in_store>1</show_in_store>
+                        </myspace>
+                        <tumblr>
+                            <label>Tumblr</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_webite>1</show_in_webite>
+                            <show_in_store>1</show_in_store>
+                        </tumblr>
+                    </fields>
+                </socialprofilelinks>
+            </groups>
+        </googleknowledgegraph>
+    </sections>
+</config>
