@@ -24,8 +24,8 @@ class Kalin_GoogleKnowledgeGraph_Model_Adminhtml_System_Config_Source_Contacttyp
     public function toOptionArray()
     {
         return array(
-            array('value' => 'technical-support',   'label' => 'technical support'),
             array('value' => 'customer-support',    'label' => 'customer support'),
+            array('value' => 'technical-support',   'label' => 'technical support'),
             array('value' => 'billing-support',     'label' => 'billing support'),
             array('value' => 'bill-payment',        'label' => 'bill payment'),
             array('value' => 'sales',               'label' => 'sales'),
