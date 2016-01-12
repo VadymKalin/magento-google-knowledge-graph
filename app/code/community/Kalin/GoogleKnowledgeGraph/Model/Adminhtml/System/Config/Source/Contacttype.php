@@ -21,6 +21,12 @@
  */
 class Kalin_GoogleKnowledgeGraph_Model_Adminhtml_System_Config_Source_Contacttype
 {
+
+    /**
+     * Get available options
+     *
+     * @return array
+     */
     public function toOptionArray()
     {
         return array(
