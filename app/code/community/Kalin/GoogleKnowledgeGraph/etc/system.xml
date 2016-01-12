@@ -102,7 +102,8 @@
                         </areaserved>
                         <contactoption translate="label">
                             <label>Contact option</label>
-                            <frontend_type>text</frontend_type>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Kalin_GoogleKnowledgeGraph_Model_Adminhtml_System_Config_Source_Contactoption</source_model>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -111,7 +112,6 @@
                         </contactoption>
                         <availablelanguage translate="label">
                             <label>Available language</label>
-                            <frontend_type>text</frontend_type>
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
