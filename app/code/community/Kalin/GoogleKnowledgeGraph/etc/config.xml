@@ -55,7 +55,7 @@
             <modules>
                 <Kalin_GoogleKnowledgeGraph>
                     <files>
-                        <default>Kalin_GoogleKnwledgeGraph.csv</default>
+                        <default>Kalin_GoogleKnowledgeGraph.csv</default>
                     </files>
                 </Kalin_GoogleKnowledgeGraph>
             </modules>
