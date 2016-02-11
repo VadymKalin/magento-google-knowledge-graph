@@ -30,8 +30,8 @@ class Kalin_GoogleKnowledgeGraph_Model_Adminhtml_System_Config_Source_Contactopt
     public function toOptionArray()
     {
         return array(
-            array('value'=> 'TollFree', 'label'=> 'TollFree'),
-            array('value'=> 'HearingImpairedSupported', 'label'=> 'HearingImpairedSupported')
+            array('value'=> 'TollFree',                 'label'=> 'Toll Free'),
+            array('value'=> 'HearingImpairedSupported', 'label'=> 'Hearing Impaired Supported')
         );
     }
 }
