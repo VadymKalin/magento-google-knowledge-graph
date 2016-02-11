@@ -30,8 +30,14 @@ class Kalin_GoogleKnowledgeGraph_Model_Adminhtml_System_Config_Source_Contactopt
     public function toOptionArray()
     {
         return array(
-            array('value'=> 'TollFree',                 'label'=> 'Toll Free'),
-            array('value'=> 'HearingImpairedSupported', 'label'=> 'Hearing Impaired Supported')
+            array(
+                'value'=> 'TollFree',
+                'label'=> Mage::helper('googleknowledgegraph')->__('Toll Free')
+            ),
+            array(
+                'value'=> 'HearingImpairedSupported',
+                'label'=> Mage::helper('googleknowledgegraph')->__('Hearing Impaired Supported')
+            )
         );
     }
 }

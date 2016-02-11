@@ -30,17 +30,17 @@ class Kalin_GoogleKnowledgeGraph_Model_Adminhtml_System_Config_Source_Contacttyp
     public function toOptionArray()
     {
         return array(
-            array('value' => 'customer-support',    'label' => 'customer support'),
-            array('value' => 'technical-support',   'label' => 'technical support'),
-            array('value' => 'billing-support',     'label' => 'billing support'),
-            array('value' => 'bill-payment',        'label' => 'bill payment'),
-            array('value' => 'sales',               'label' => 'sales'),
-            array('value' => 'reservations',        'label' => 'reservations'),
-            array('value' => 'credit-card-support', 'label' => 'credit card support'),
-            array('value' => 'emergency',           'label' => 'emergency'),
-            array('value' => 'baggage-tracking',    'label' => 'baggage tracking'),
-            array('value' => 'roadside-assistance', 'label' => 'roadside assistance'),
-            array('value' => 'package-tracking',    'label' => 'package tracking'),
+            array('value' => 'customer-support',    'label' => Mage::helper('googleknowledgegraph')->__('customer support')),
+            array('value' => 'technical-support',   'label' => Mage::helper('googleknowledgegraph')->__('technical support')),
+            array('value' => 'billing-support',     'label' => Mage::helper('googleknowledgegraph')->__('billing support')),
+            array('value' => 'bill-payment',        'label' => Mage::helper('googleknowledgegraph')->__('bill payment')),
+            array('value' => 'sales',               'label' => Mage::helper('googleknowledgegraph')->__('sales')),
+            array('value' => 'reservations',        'label' => Mage::helper('googleknowledgegraph')->__('reservations')),
+            array('value' => 'credit-card-support', 'label' => Mage::helper('googleknowledgegraph')->__('credit card support')),
+            array('value' => 'emergency',           'label' => Mage::helper('googleknowledgegraph')->__('emergency')),
+            array('value' => 'baggage-tracking',    'label' => Mage::helper('googleknowledgegraph')->__('baggage tracking')),
+            array('value' => 'roadside-assistance', 'label' => Mage::helper('googleknowledgegraph')->__('roadside assistance')),
+            array('value' => 'package-tracking',    'label' => Mage::helper('googleknowledgegraph')->__('package tracking')),
         );
     }
 }
