@@ -24,7 +24,7 @@
 <config>
     <modules>
         <Kalin_GoogleKnowledgeGraph>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </Kalin_GoogleKnowledgeGraph>
     </modules>
     <global>
@@ -55,7 +55,7 @@
             <modules>
                 <Kalin_GoogleKnowledgeGraph>
                     <files>
-                        <default>Kalin_GoogleKnwledgeGraph.csv</default>
+                        <default>Kalin_GoogleKnowledgeGraph.csv</default>
                     </files>
                 </Kalin_GoogleKnowledgeGraph>
             </modules>
