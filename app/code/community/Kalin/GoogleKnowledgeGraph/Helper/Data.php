@@ -42,4 +42,15 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     const XML_PATH_GKG_PINTERREST =        'googleknowledgegraph/socialprofilelinks/pinterrest';
     const XML_PATH_GKG_LINKEDIN =          'googleknowledgegraph/socialprofilelinks/linkedin';
 
+    /**
+     * Whether Google Knowledge Graph is ready to use
+     *
+     * @param mixed $store
+     * @return bool
+     */
+    public function isGoogleKnowledgeGraphAvailable($store = null)
+    {
+        return Mage::getStoreConfigFlag(self::XML_PATH_GKG_ENABLED, $store);
+    }
+
 }
