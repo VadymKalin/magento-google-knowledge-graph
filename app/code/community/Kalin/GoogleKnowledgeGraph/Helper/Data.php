@@ -43,14 +43,80 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     const XML_PATH_GKG_LINKEDIN =          'googleknowledgegraph/socialprofilelinks/linkedin';
 
     /**
-     * Whether Google Knowledge Graph is ready to use
+     * Check if Google Knowledge Graph is enabled
      *
-     * @param mixed $store
+     * @param int $storeId Store view ID
      * @return bool
      */
-    public function isGoogleKnowledgeGraphAvailable($store = null)
+    public function isGoogleKnowledgeGraphAvailable($storeId = null)
     {
-        return Mage::getStoreConfigFlag(self::XML_PATH_GKG_ENABLED, $store);
+        return Mage::getStoreConfigFlag(self::XML_PATH_GKG_ENABLED, $storeId);
+    }
+
+    /*
+     * Get logo url path
+     *
+     * @param int $storeId Store view ID
+     * @return string
+     */
+    public function getLogoUrl($storeId = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_GKG_LOGOS, $storeId);
+    }
+
+    /**
+     * Get telephone number
+     *
+     * @param int $storeId Store view ID
+     * @return integer
+     */
+    public function getTelephone($storeId = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_GKG_TELEPHONE, $storeId);
+    }
+
+    /**
+     * Get type of contact
+     *
+     * @param int $storeId Store view ID
+     * @return string
+     */
+    public function getContactType($storeId = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_GKG_CONTACTTYPE, $storeId);
+    }
+
+    /**
+     * Get area served
+     *
+     * @param null $storeId
+     * @return mixed
+     */
+    public function getAreaServed($storeId = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_GKG_AREASERVED, $storeId);
+    }
+
+    /**
+     * Get contact option
+     *
+     * @param null $storeId
+     * @return mixed
+     */
+    public function getContactOption($storeId = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_GKG_CONTACTOPTION, $storeId);
+    }
+
+    /**
+     * Get available language
+     *
+     * @param null $storeId
+     * @return mixed
+     */
+    public function getAvailableLanguage($storeId = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_GKG_AVAILABLELANGUAGE, $storeId);
     }
 
 }
