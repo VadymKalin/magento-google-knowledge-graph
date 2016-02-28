@@ -35,4 +35,16 @@
 class Kalin_Googleknowledgegraph_Block_Gkg extends Mage_Core_Block_Template
 {
 
+    /**
+     * Render Google Knowledge Graph
+     *
+     * @return string
+     */
+    protected function _toHtml()
+    {
+        if(!Mage::Helper('googleknowledgegraph')->isGoogleKnowledgeGraphAvailable()) {
+            return '';
+        }
+        return parent::_toHtml();
+    }
 }
