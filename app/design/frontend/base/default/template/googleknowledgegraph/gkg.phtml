@@ -20,3 +20,40 @@
  * @license   http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 ?>
+<?php
+$_helper = $this->helper('googleknowledgegraph');
+$_baseUrl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+?>
+<!-- BEGIN GOOGLE KNOWLEDGE GRAPH -->
+<?php if (!$this->helper('core/cookie')->isUserNotAllowSaveCookie()): ?>
+    <!--TODO logo - check if download use else use default Block -->
+    <!--TODO sameAs = foreach URL social links Block -->
+    <!--TODO contactPoint contactoption = multiselect -->
+    <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "Organization",
+        "url" : "<?php echo $_baseUrl; ?>",
+        "logo" : "<?php echo $_helper->getLogoUrl(); ?>",
+        "sameAs" : [
+            "http:://facebook.com/",
+            "http://linkedin.com/"
+        ],
+        "contactPoint" : [{
+           "@type" : "ContactPoint",
+           "telephone" : "<?php echo $_helper->getTelephone(); ?>",
+           "contactType" : "<?php echo $_helper->getContactType(); ?>",
+           "contactOption" : "TollFree",
+           "areaServed" : [
+                "US",
+                "UA"
+           ],
+           "availableLanguage" : [
+                "English",
+                "Ukrainian"
+           ]
+        }]
+    }
+    </script>
+    <!-- END GOOGLE KNOWLEDGE GRAPH -->
+<?php endif; ?>
