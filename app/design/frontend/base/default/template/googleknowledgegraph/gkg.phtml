@@ -43,7 +43,7 @@ $_baseUrl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
            "@type" : "ContactPoint",
            "telephone" : "<?php echo $_helper->getTelephone(); ?>",
            "contactType" : "<?php echo $_helper->getContactType(); ?>",
-           "contactOption" : "TollFree",
+           "contactOption" : "<?php echo $_helper->getContactOption(); ?>",
            "areaServed" : [
                 "US",
                 "UA"
