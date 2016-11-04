@@ -21,3 +21,5 @@ Branch | Build Status | Coverage
     * Copy `app` directory into Magento
 
 ## Configuration
+
+System => Configuration => Catalog => Google Knowledge Graph
