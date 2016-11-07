@@ -34,6 +34,15 @@
 
 class Kalin_Googleknowledgegraph_Block_Gkg extends Mage_Core_Block_Template
 {
+    /**
+     * Get same as
+     *
+     * @return array
+     */
+    public function getSameAs()
+    {
+        return '';
+    }
 
     /**
      * Is Google Knowledge Graph available
