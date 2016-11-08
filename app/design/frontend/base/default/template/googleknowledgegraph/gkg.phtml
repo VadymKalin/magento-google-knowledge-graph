@@ -35,9 +35,7 @@ $_baseUrl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
         "url" : "<?php echo $_baseUrl; ?>",
         "logo" : "<?php echo $_helper->getLogoUrl(); ?>",
         "sameAs" : [
-            "http:://facebook.com/",
-            "http://linkedin.com/"
-        ],
+            <?php echo $_helper->getSocialLinks(); ?>],
         "contactPoint" : [{
            "@type" : "ContactPoint",
            "telephone" : "<?php echo $_helper->getTelephone(); ?>",
