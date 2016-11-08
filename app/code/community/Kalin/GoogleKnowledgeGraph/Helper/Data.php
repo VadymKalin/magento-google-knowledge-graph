@@ -22,6 +22,22 @@
 class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
 {
     /**
+     * Social profileslinks
+     */
+    protected $socialLinks = array(
+        'facebook',
+        'twitter',
+        'googleplus',
+        'instagram',
+        'youtube',
+        'tumblr',
+        'myspace',
+        'soundcloud',
+        'pinterrest',
+        'linkedin'
+    );
+
+    /**
      * Config paths for using throughout the code
      */
     const XML_PATH_GKG_ENABLED =           'googleknowledgegraph/logos/enabled';
@@ -117,6 +133,41 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     public function getAvailableLanguage($storeId = null)
     {
         return Mage::getStoreConfig(self::XML_PATH_GKG_AVAILABLELANGUAGE, $storeId);
+    }
+
+    /**
+     * Get all not empty social profiles
+     */
+    protected function getConfigData($socialLinks)
+    {
+        return Mage::getStoreConfig('googleknowledgegraph/socialprofilelinks/' . $socialLinks);
+    }
+
+    /**
+     * Get all links
+     */
+    public function getSocialLinks()
+    {
+        $socialLinks = array(
+            'facebook',
+            'twitter',
+            'googleplus',
+            'instagram',
+            'youtube',
+            'tumblr',
+            'myspace',
+            'soundcloud',
+            'pinterrest',
+            'linkedin'
+        );
+
+        foreach ($socialLinks as $link)
+        {
+            $linked = $this->getConfigData($link);
+            if ($linked != '') {
+                echo '"' .$linked . '"'. ',';
+            }
+        }
     }
 
 }
