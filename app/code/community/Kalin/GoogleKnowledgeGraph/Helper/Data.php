@@ -21,21 +21,6 @@
  */
 class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
 {
-    /**
-     * Social profileslinks
-     */
-    protected $socialLinks = array(
-        'facebook',
-        'twitter',
-        'googleplus',
-        'instagram',
-        'youtube',
-        'tumblr',
-        'myspace',
-        'soundcloud',
-        'pinterrest',
-        'linkedin'
-    );
 
     /**
      * Config paths for using throughout the code
@@ -59,6 +44,22 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     const XML_PATH_GKG_LINKEDIN =          'googleknowledgegraph/socialprofilelinks/linkedin';
 
     /**
+     * Social profileslinks
+     */
+    protected $socialLinks = array(
+        'facebook',
+        'twitter',
+        'googleplus',
+        'instagram',
+        'youtube',
+        'tumblr',
+        'myspace',
+        'soundcloud',
+        'pinterrest',
+        'linkedin'
+    );
+
+    /**
      * Check if Google Knowledge Graph is enabled
      *
      * @param int $storeId Store view ID
@@ -77,7 +78,16 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getLogoUrl($storeId = null)
     {
-        return Mage::getStoreConfig(self::XML_PATH_GKG_LOGOS, $storeId);
+        $fileName = Mage::getStoreConfig(self::XML_PATH_GKG_LOGOS, $storeId);
+        if ($fileName) {
+            $uploadDir = 'theme';
+            $fullFileName = Mage::getBaseDir('media') . DS . $uploadDir . DS . $fileName;
+            if (file_exists($fullFileName)) {
+                return Mage::getBaseUrl('media') . $uploadDir . '/' . $fileName;
+            }
+        }
+        return Mage::getDesign()->getSkinUrl('images/logo_email.gif');
+
     }
 
     /**
@@ -136,16 +146,6 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
-     * Get all not empty social profiles
-     *
-     * @return string
-     */
-    protected function getConfigData($socialLinks)
-    {
-        return Mage::getStoreConfig('googleknowledgegraph/socialprofilelinks/' . $socialLinks);
-    }
-
-    /**
      * Get all links
      *
      * @return string
@@ -172,6 +172,16 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
                 echo '"' .$linked . '"'. ',';
             }
         }
+    }
+
+    /**
+     * Get all not empty social profiles
+     *
+     * @return string
+     */
+    protected function getConfigData($socialLinks)
+    {
+        return Mage::getStoreConfig('googleknowledgegraph/socialprofilelinks/' . $socialLinks);
     }
 
 }
