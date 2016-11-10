@@ -6,7 +6,7 @@ Branch | Build Status | Coverage
 
 ## Release Information
 
-*Kalin_GoogleKnowledgeGraph 0.2.0*
+*Kalin_GoogleKnowledgeGraph 0.9.0*
 
 ## System Requirements
 
