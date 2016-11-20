@@ -44,7 +44,7 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     const XML_PATH_GKG_LINKEDIN =          'googleknowledgegraph/socialprofilelinks/linkedin';
 
     /**
-     * Social profileslinks
+     * @var array social profileslinks
      */
     protected $socialLinks = array(
         'facebook',
