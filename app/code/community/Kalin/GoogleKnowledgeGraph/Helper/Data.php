@@ -41,7 +41,6 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
 //    const XML_PATH_GKG_MYSPACE =           'googleknowledgegraph/socialprofilelinks/myspace';
 //    const XML_PATH_GKG_SOUNDCLOUD =        'googleknowledgegraph/socialprofilelinks/soundcloud';
 //    const XML_PATH_GKG_PINTERREST =        'googleknowledgegraph/socialprofilelinks/pinterrest';
-//    const XML_PATH_GKG_LINKEDIN =          'googleknowledgegraph/socialprofilelinks/linkedin';
 
     /**
      * @var array social profileslinks
