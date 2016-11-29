@@ -32,15 +32,6 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     const XML_PATH_GKG_AREASERVED =        'googleknowledgegraph/corporatecontacts/areaserved';
     const XML_PATH_GKG_CONTACTOPTION =     'googleknowledgegraph/corporatecontacts/contactoption';
     const XML_PATH_GKG_AVAILABLELANGUAGE = 'googleknowledgegraph/corporatecontacts/availablelanguage';
-//    const XML_PATH_GKG_FACEBOOK =          'googleknowledgegraph/socialprofilelinks/facebook';
-//    const XML_PATH_GKG_TWITTER =           'googleknowledgegraph/socialprofilelinks/twitter';
-//    const XML_PATH_GKG_GOOGLEPLUS =        'googleknowledgegraph/socialprofilelinks/googleplus';
-//    const XML_PATH_GKG_INSTAGRAM =         'googleknowledgegraph/socialprofilelinks/instagram';
-//    const XML_PATH_GKG_YOUTUBE =           'googleknowledgegraph/socialprofilelinks/youtube';
-//    const XML_PATH_GKG_TUMBLR =            'googleknowledgegraph/socialprofilelinks/tumblr';
-//    const XML_PATH_GKG_MYSPACE =           'googleknowledgegraph/socialprofilelinks/myspace';
-//    const XML_PATH_GKG_SOUNDCLOUD =        'googleknowledgegraph/socialprofilelinks/soundcloud';
-//    const XML_PATH_GKG_PINTERREST =        'googleknowledgegraph/socialprofilelinks/pinterrest';
 
     /**
      * @var array social profileslinks
