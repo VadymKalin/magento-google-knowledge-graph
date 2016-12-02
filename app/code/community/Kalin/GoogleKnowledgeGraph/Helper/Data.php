@@ -165,7 +165,7 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
-     * Get all not empty social profiles
+     * Get config data for social links
      *
      * @return string
      */
