@@ -33,21 +33,6 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     const XML_PATH_GKG_CONTACTOPTION =     'googleknowledgegraph/corporatecontacts/contactoption';
     const XML_PATH_GKG_AVAILABLELANGUAGE = 'googleknowledgegraph/corporatecontacts/availablelanguage';
 
-    /**
-     * @var array social profileslinks
-     */
-    protected $socialLinks = array(
-        'facebook',
-        'twitter',
-        'googleplus',
-        'instagram',
-        'youtube',
-        'tumblr',
-        'myspace',
-        'soundcloud',
-        'pinterrest',
-        'linkedin'
-    );
 
     /**
      * Check if Google Knowledge Graph is enabled
