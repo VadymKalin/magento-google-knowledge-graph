@@ -120,42 +120,4 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig(self::XML_PATH_GKG_AVAILABLELANGUAGE, $storeId);
     }
 
-    /**
-     * Get all social links
-     *
-     * @return string
-     */
-    public function getSocialLinks()
-    {
-        $socialLinks = array(
-            'facebook',
-            'twitter',
-            'googleplus',
-            'instagram',
-            'youtube',
-            'tumblr',
-            'myspace',
-            'soundcloud',
-            'pinterrest',
-            'linkedin'
-        );
-
-        foreach ($socialLinks as $link)
-        {
-            $linked = $this->getConfigData($link);
-            if ($linked != '') {
-                echo '"' .$linked . '"'. ',';
-            }
-        }
-    }
-
-    /**
-     * Get config data for social links
-     *
-     * @return string
-     */
-    protected function getConfigData($socialLinks)
-    {
-        return Mage::getStoreConfig('googleknowledgegraph/socialprofilelinks/' . $socialLinks);
-    }
 }
