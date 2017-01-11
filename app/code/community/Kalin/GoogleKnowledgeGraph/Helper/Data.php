@@ -119,5 +119,4 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return Mage::getStoreConfig(self::XML_PATH_GKG_AVAILABLELANGUAGE, $storeId);
     }
-
 }
