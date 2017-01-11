@@ -19,6 +19,13 @@
  * @copyright Copyright (c) 2015-2016 Vadym Kalin (http://full-stack-dev.com)
  * @license   http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
+
+/**
+ * KalinGoogleKnowledgeGraph data helper
+ *
+ * @category   Kalin
+ * @package    Kalin_GoogleKnowledgeGraph
+ */
 class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
 {
 
@@ -48,7 +55,7 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * Get available language
      *
-     * @param null $storeId
+     * @param null $storeId Store view ID
      * @return mixed
      */
     public function getAvailableLanguage($storeId = null)
@@ -59,7 +66,7 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * Get area served
      *
-     * @param null $storeId
+     * @param null $storeId  Store view ID
      * @return mixed
      */
     public function getAreaServed($storeId = null)
@@ -81,7 +88,7 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * Get contact option
      *
-     * @param null $storeId
+     * @param null $storeId Store view ID
      * @return mixed
      */
     public function getContactOption($storeId = null)
