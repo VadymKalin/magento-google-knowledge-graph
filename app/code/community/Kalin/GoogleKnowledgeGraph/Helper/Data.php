@@ -46,9 +46,53 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
-     * Get logo path
+     * Get available language
      *
      * @param null $storeId
+     * @return mixed
+     */
+    public function getAvailableLanguage($storeId = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_GKG_AVAILABLELANGUAGE, $storeId);
+    }
+
+    /**
+     * Get area served
+     *
+     * @param null $storeId
+     * @return mixed
+     */
+    public function getAreaServed($storeId = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_GKG_AREASERVED, $storeId);
+    }
+
+    /**
+     * Get type of contact
+     *
+     * @param int $storeId Store view ID
+     * @return string
+     */
+    public function getContactType($storeId = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_GKG_CONTACTTYPE, $storeId);
+    }
+
+    /**
+     * Get contact option
+     *
+     * @param null $storeId
+     * @return mixed
+     */
+    public function getContactOption($storeId = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_GKG_CONTACTOPTION, $storeId);
+    }
+
+    /**
+     * Get logo path
+     *
+     * @param null $storeId Store view ID
      * @return mixed
      */
     public function getLogoPath($storeId = null)
@@ -65,49 +109,5 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
     public function getTelephone($storeId = null)
     {
         return Mage::getStoreConfig(self::XML_PATH_GKG_TELEPHONE, $storeId);
-    }
-
-    /**
-     * Get type of contact
-     *
-     * @param int $storeId Store view ID
-     * @return string
-     */
-    public function getContactType($storeId = null)
-    {
-        return Mage::getStoreConfig(self::XML_PATH_GKG_CONTACTTYPE, $storeId);
-    }
-
-    /**
-     * Get area served
-     *
-     * @param null $storeId
-     * @return mixed
-     */
-    public function getAreaServed($storeId = null)
-    {
-        return Mage::getStoreConfig(self::XML_PATH_GKG_AREASERVED, $storeId);
-    }
-
-    /**
-     * Get contact option
-     *
-     * @param null $storeId
-     * @return mixed
-     */
-    public function getContactOption($storeId = null)
-    {
-        return Mage::getStoreConfig(self::XML_PATH_GKG_CONTACTOPTION, $storeId);
-    }
-
-    /**
-     * Get available language
-     *
-     * @param null $storeId
-     * @return mixed
-     */
-    public function getAvailableLanguage($storeId = null)
-    {
-        return Mage::getStoreConfig(self::XML_PATH_GKG_AVAILABLELANGUAGE, $storeId);
     }
 }
