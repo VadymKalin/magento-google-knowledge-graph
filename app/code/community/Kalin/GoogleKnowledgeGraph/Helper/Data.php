@@ -45,24 +45,15 @@ class Kalin_GoogleKnowledgeGraph_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfigFlag(self::XML_PATH_GKG_ENABLED, $storeId);
     }
 
-    /*
-     * Get logo url path
+    /**
+     * Get logo path
      *
-     * @param int $storeId Store view ID
-     * @return string
+     * @param null $storeId
+     * @return mixed
      */
-    public function getLogoUrl($storeId = null)
+    public function getLogoPath($storeId = null)
     {
-        $fileName = Mage::getStoreConfig(self::XML_PATH_GKG_LOGOS, $storeId);
-        if ($fileName) {
-            $uploadDir = 'theme';
-            $fullFileName = Mage::getBaseDir('media') . DS . $uploadDir . DS . $fileName;
-            if (file_exists($fullFileName)) {
-                return Mage::getBaseUrl('media') . $uploadDir . '/' . $fileName;
-            }
-        }
-        return Mage::getDesign()->getSkinUrl('images/logo_email.gif');
-
+        return Mage::getStoreConfig(self::XML_PATH_GKG_LOGOS, $storeId);
     }
 
     /**
