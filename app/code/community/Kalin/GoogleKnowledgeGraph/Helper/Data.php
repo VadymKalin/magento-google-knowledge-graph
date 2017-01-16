@@ -21,7 +21,7 @@
  */
 
 /**
- * KalinGoogleKnowledgeGraph data helper
+ * GoogleKnowledgeGraph data helper
  *
  * @category   Kalin
  * @package    Kalin_GoogleKnowledgeGraph
